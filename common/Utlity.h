@@ -19,11 +19,11 @@ using namespace concurrency::streams;
 #define MEMORYUSAGE L"memoryusage"
 #define CPUUSAGE L"cpuusage"
 
-#define RESTCPU L"/postCpu"
-#define RESTMEMORY L"/postMemory"
-#define RESTPROCESS L"/postProcess"
-#define RESTREGISTER L"/registerDevice"
-#define RESTISSUETOKEN L"/issueToken"
+#define RESTCPU L"/cpu"
+#define RESTMEMORY L"/memory"
+#define RESTPROCESS L"/process"
+#define RESTREGISTER L"/registerdevice"
+#define RESTISSUETOKEN L"/issuetoken"
 
 #define SERVERINI "serverconfig.ini"
 #define CLIENTINI "clientconfig.ini"

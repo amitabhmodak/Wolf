@@ -3,7 +3,7 @@
 #include <mongocxx/client.hpp>
 #include <mongocxx/instance.hpp>
 #include <string>
-#define DB "restcpp"
+#define DB "wofsysinfo"
 #define COLLECTION_CPU "cpu"
 #define COLLECTION_MEMORY "memory"
 #define COLLECTION_PROCESS "process"
