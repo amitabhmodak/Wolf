@@ -38,24 +38,24 @@ void RestServer::createRoutes() {
 	m_listener->support(methods::DEL, [this](http_request request) {this->handleDelete(request); });
 
 	m_postRoutes.emplace(RESTCPU, [](http_request request) {
-		auto handler = std::make_unique<RequestHandler>();
-		handler->postCpu(request); });
+		RequestHandler handler ;
+		handler.postCpu(request); });
 
 	m_postRoutes.emplace(RESTMEMORY, [](http_request request) {
-		auto handler = std::make_unique<RequestHandler>();
-		handler->postMemory(request); });
+		RequestHandler handler;
+		handler.postMemory(request); });
 
 	m_postRoutes.emplace(RESTPROCESS, [this](http_request request) {
-		auto handler = std::make_unique<RequestHandler>();
-		handler->postProcess(request); });
+		RequestHandler handler;
+		handler.postProcess(request); });
 
 	m_postRoutes.emplace(RESTREGISTER, [this](http_request request) {
-		auto handler = std::make_unique<RequestHandler>();
-		handler->registerDevice(request); });
+		RequestHandler handler;
+		handler.registerDevice(request); });
 
 	m_getRoutes.emplace(RESTISSUETOKEN, [this](http_request request) {
-		auto handler = std::make_unique<RequestHandler>();
-		handler->issueToken(request); });
+		RequestHandler handler;
+		handler.issueToken(request); });
 }
 
 void RestServer::handleGet(http_request request)
